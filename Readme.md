@@ -4,9 +4,9 @@
 A **Bitmap Index** is a space-efficient data structure commonly used in **columnar storage** and **database indexing**. It represents categorical data as **bitmaps** (binary arrays), enabling fast query performance and compression.
 
 ### How It Works
-1️ **Bitmap Creation**: Each unique value in a column gets its own binary array. If a row contains that value, the corresponding bit is `1`, otherwise `0`.
-2️ **Run-Length Encoding (RLE)**: To compress storage, consecutive `0`s and `1`s are stored as `(count, value)` pairs.
-3️ **Efficient Querying**: Boolean operations (AND, OR, NOT) allow fast filtering without scanning entire datasets.
+1️. **Bitmap Creation**: Each unique value in a column gets its own binary array. If a row contains that value, the corresponding bit is `1`, otherwise `0`.
+2️. **Run-Length Encoding (RLE)**: To compress storage, consecutive `0`s and `1`s are stored as `(count, value)` pairs.
+3️. **Efficient Querying**: Boolean operations (AND, OR, NOT) allow fast filtering without scanning entire datasets.
 
 ### Example
 #### Given Dataset:
